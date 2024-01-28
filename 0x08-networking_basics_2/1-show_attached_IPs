@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
-# Displays all active IPv4 addresses on the machine.
+# Configures an Ubuntu server to modify the IP addresses for localhost and facebook.com.
 
-# Use ifconfig to retrieve network interface information,
-# extract IPv4 addresses using grep and regular expressions,
-# and remove unnecessary characters using cut.
+# Create a backup of the original hosts file
+cp /etc/hosts ~/hosts.new
 
-ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-
+# Update the IP address for localhost in the new hosts file
+echo "127.0.0.2		localhost" > ~/hosts.new
+
+# Add a new entry for facebook.com with the desired IP address
+echo "8.8.8.8		facebook.com" >> ~/hosts.new
+
+# Replace the original hosts file with the modified one
+cp -f ~/hosts.new /etc/hosts
