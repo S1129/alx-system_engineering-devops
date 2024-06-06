@@ -106,7 +106,7 @@ Add URLs here:
 
 Add URLs here:
 
-- Repo: [GitHub repository: alx-system_engineering-devops](https://github.com/mugambi12/alx-system_engineering-devops)
+- Repo: [GitHub repository: alx-system_engineering-devops](https://github.com/s1129/alx-system_engineering-devops)
 - Directory: `0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter`
 - File: `2-contribution-to_what-happens-when_github_answer`
 
